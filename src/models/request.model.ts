@@ -1,12 +1,12 @@
 
- interface CreateStudentrequest {
-    name: string,
-    grade: string
+ interface CreateStudentRequest {
+    name: string;
+    grade: string;
 }
 
  interface UpdateStudentRequest {
-    name?: string,
-    grade?: string
+    name?: string;
+    grade?: string;
 }
 
-export { CreateStudentrequest, UpdateStudentRequest }
+export { CreateStudentRequest, UpdateStudentRequest }

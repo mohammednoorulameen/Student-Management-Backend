@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudentRouter = void 0;
+const express_1 = require("express");
+const student_repository_1 = require("../repositories/student.repository");
+const student_service_1 = require("../services/student.service");
+const student_controller_1 = require("../controllers/student.controller");
+let router = (0, express_1.Router)();
+exports.StudentRouter = router;
+let repository = new student_repository_1.StudentRepository();
+let service = new student_service_1.StudentService(repository);
+let controller = new student_controller_1.StudentController(service);
+router.post('/', (req, res) => controller.create(req, res));

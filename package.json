@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "build": "tsc"
+    "start": "tsc && node dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^24.0.7",
     "eslint": "^9.30.0",
     "prettier": "^3.6.2",
@@ -19,6 +19,9 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "mongoose": "^8.16.1"
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.10.0"
   }
 }
