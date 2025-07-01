@@ -11,3 +11,7 @@ let repository = new student_repository_1.StudentRepository();
 let service = new student_service_1.StudentService(repository);
 let controller = new student_controller_1.StudentController(service);
 router.post('/', (req, res) => controller.create(req, res));
+router.put('/:id', (req, res) => controller.update(req, res));
+router.delete('/:id', (req, res) => controller.delete(req, res));
+router.get('/:id', (req, res) => controller.getStudent(req, res));
+router.get('/', (req, res) => controller.getAllStudent(req, res));
